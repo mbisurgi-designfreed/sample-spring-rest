@@ -1,0 +1,19 @@
+<div class="center">
+    <div class="row d-flex justify-content-center">
+        <form class="col-md-4 login" #f="ngForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Username" name="username" ngModel required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password" ngModel required>
+            </div>
+            <div class="btn-container">
+                <button class="btn btn-primary" type="button" style="cursor: pointer" [disabled]="!f.valid" (click)="onSignin(f)">Sign In</button>
+                <button class="btn btn-success" type="button" style="cursor: pointer" [disabled]="!f.valid" (click)="onSignup(f)">Sign Up</button>
+            </div>
+            <small *ngIf="message != null" class="form-text text-danger mt-3">{{ message }}</small>
+        </form>
+    </div>
+</div>

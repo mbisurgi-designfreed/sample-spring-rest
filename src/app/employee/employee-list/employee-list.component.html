@@ -1,0 +1,22 @@
+<h4 class="mt-3 mt-md-3 text-dark sub">List of Employees</h4>
+<table class="table table-striped">
+  <thead class="bg-dark text-warning">
+    <tr>
+      <th class="p-1">#</th>
+      <th class="p-1">Name</th>
+      <th class="p-1">Lastname</th>
+      <th class="p-1">Email</th>
+      <th class="p-1"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <th class="p-0 px-1 align-middle" scope="row">{{ employee.id }}</th>
+      <td class="p-0 px-1 align-middle">{{ employee.name }}</td>
+      <td class="p-0 px-1 align-middle">{{ employee.lastname }}</td>
+      <td class="p-0 px-1 align-middle">{{ employee.email }}</td>
+      <td><a [routerLink]="[employee.id, 'edit']" class="mr-2"><i class="fas fa-pencil-alt text-dark" aria-hidden="true"></i></a> <a (click)="onDelete(employee.id)" style="cursor: pointer"><i class="fas fa-trash text-dark" aria-hidden="true"></i></a></td>
+    </tr>
+  </tbody>
+</table>
+<button routerLink="new" class="btn btn-dark" type="button" style="cursor: pointer">New Employee</button>

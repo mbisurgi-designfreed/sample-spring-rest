@@ -1,0 +1,19 @@
+<h6 class="mt-3 mt-md-3 text-white sub">Insert / Update Employee</h6>
+<form class="mt-3" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <div class="form-group col-xs-12 col-md-6">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" formControlName="name" required>
+    </div>
+    <div class="form-group col-xs-12 col-md-6">
+      <label for="lastname">Lastname</label>
+      <input type="text" class="form-control" id="lastname" formControlName="lastname" required>
+    </div>
+    <div class="form-group col-xs-12 col-md-3">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" formControlName="email" required>
+    </div>
+    <button type="submit" class="btn btn-dark" style="cursor: pointer" [disabled]="!form.valid">Save</button>
+  </div>
+</form>
+<div *ngIf="message != null" class="mt-2 form-text text-success">{{ message }}</div>
