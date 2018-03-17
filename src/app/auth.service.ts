@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { Subject } from 'rxjs/Subject';
 
-const API_URL = 'http://centrocompartido.engux.com.ar:8099/sample-spring-rest';
+const API_URL = 'https://centrocompartido.engux.com.ar:8443/sample-spring-rest';
 
 @Injectable()
 export class AuthService {

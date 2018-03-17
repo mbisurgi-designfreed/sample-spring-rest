@@ -4,7 +4,7 @@ import { Subject } from 'rxjs/Subject';
 
 import { Employee } from './employee';
 
-const API_URL = 'http://centrocompartido.engux.com.ar:8099/sample-spring-rest';
+const API_URL = 'https://centrocompartido.engux.com.ar:8443/sample-spring-rest';
 
 @Injectable()
 export class EmployeeService {
